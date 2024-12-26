@@ -2,11 +2,11 @@ FROM python:3.8
 
 COPY ./requirements.txt /webapp/requirements.txt
 
-WORKDIR /webapp
+WORKDIR /webapprepo
 
 RUN pip install -r requirements.txt
 
-COPY webapp/* /webapp
+COPY webapp/* /webapprepo
 
 ENTRYPOINT [ "uvicorn" ]
 
